@@ -1,6 +1,4 @@
-import { Component } from "@angular/core";
-import { Observable } from "rxjs/internal/Observable";
-import { CharacterFavoriteListService } from "../character-favorite-list.service";
+import { Component, Input } from "@angular/core";
 import { Character } from "../characters-list/Character";
 
 @Component({
@@ -9,8 +7,7 @@ import { Character } from "../characters-list/Character";
   styleUrls: ["./favorites-list.component.css"],
 })
 export class FavoritesListComponent {
-  favoriteList$: Observable<Character[]>;
-  constructor(private list: CharacterFavoriteListService) {
-    this.favoriteList$ = list.favoriteList.asObservable();
-  }
+  @Input() favouriteList: Set<Character> = new Set();
+
+  constructor() {}
 }

@@ -1,6 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { CharacterDataService } from "../character-data.service";
-import { CharacterFavoriteListService } from "../character-favorite-list.service";
 import { Character } from "./Character";
 
 @Component({
@@ -11,13 +10,12 @@ import { Character } from "./Character";
 export class CharactersListComponent implements OnInit {
   characters: Character[] = [];
 
-  constructor(
-    private list: CharacterFavoriteListService,
-    private characterDataService: CharacterDataService
-  ) {}
+  constructor(private characterDataService: CharacterDataService) {}
 
-  addToList(character: Character): void {
-    this.list.addToList(character);
+  @Output() addCharacterMessageEvent = new EventEmitter<Character>();
+
+  addCharacterToList(character: Character) {
+    this.addCharacterMessageEvent.emit(character);
   }
 
   ngOnInit(): void {
