@@ -1,25 +1,26 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
-import { Character } from './characters-list/Character';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs/internal/BehaviorSubject";
+import { Character } from "./characters-list/Character";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class CharacterFavoriteListService {
+  private _favoriteList: Character[] = [];
+  favoriteList: BehaviorSubject<Character[]> = new BehaviorSubject(
+    this._favoriteList
+  );
 
-  private _favoriteList:Character[] = [];
-  favoriteList: BehaviorSubject<Character[]> = new BehaviorSubject(this._favoriteList);
+  constructor() {}
 
-  constructor() { }
-
-  addToList(character: Character){
-    let agent = this._favoriteList.find((valor1) => valor1.personaje == character.personaje);
-    if(!agent){
+  addToList(character: Character) {
+    let agent = this._favoriteList.find(
+      (valor1) => valor1.personaje == character.personaje
+    );
+    if (!agent) {
       this._favoriteList.push(character);
-    }else{
-
+    } else {
     }
     this.favoriteList.next(this._favoriteList);
   }
-
 }

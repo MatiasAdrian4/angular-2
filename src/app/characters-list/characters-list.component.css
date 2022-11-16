@@ -1,15 +1,15 @@
-.duelista{
-    border: 2px solid red;
+.duelista {
+  border: 2px solid red;
 }
 
-.iniciador{
-    border: 2px solid rgb(21, 0, 255);
+.iniciador {
+  border: 2px solid rgb(21, 0, 255);
 }
 
-.controlador{
-    border: 2px solid rgb(0, 255, 38);
+.controlador {
+  border: 2px solid rgb(0, 255, 38);
 }
 
-.centinela{
-    border: 2px solid rgb(217, 0, 255);
+.centinela {
+  border: 2px solid rgb(217, 0, 255);
 }

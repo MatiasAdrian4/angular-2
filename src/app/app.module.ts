@@ -1,15 +1,15 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { CharactersListComponent } from './characters-list/characters-list.component';
-import { FavoritesListComponent } from './favorites-list/favorites-list.component';
-import { CharactersHomeComponent } from './characters-home/characters-home.component';
-import { CharactersContacComponent } from './characters-contac/characters-contac.component';
-import { CharactersClassComponent } from './characters-class/characters-class.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { CharactersListComponent } from "./characters-list/characters-list.component";
+import { FavoritesListComponent } from "./favorites-list/favorites-list.component";
+import { CharactersHomeComponent } from "./characters-home/characters-home.component";
+import { CharactersContacComponent } from "./characters-contac/characters-contac.component";
+import { CharactersClassComponent } from "./characters-class/characters-class.component";
 
 @NgModule({
   declarations: [
@@ -18,14 +18,10 @@ import { CharactersClassComponent } from './characters-class/characters-class.co
     FavoritesListComponent,
     CharactersHomeComponent,
     CharactersContacComponent,
-    CharactersClassComponent
+    CharactersClassComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
