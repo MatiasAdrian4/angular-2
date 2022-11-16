@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Personaje</th>
+            <th>Habilidad1</th>
+            <th>Habilidad2</th>
+            <th>Habilidad3</th>
+            <th>Habilidad4</th>
+            <th>Agregar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let character of characters">
+            <td><img width="80" class="img-thumbnail" [src]="character.imagen" [alt]="character.personaje">{{character.personaje}}</td>
+            <td>{{character.habilidad1}}</td>
+            <td>{{character.habilidad2}}</td>
+            <td>{{character.habilidad3}}</td>
+            <td>{{character.habilidad4}}</td>
+            <td><button (click)="addToList(character)">Agregar</button></td>
+        </tr>
+    </tbody>
+</table>

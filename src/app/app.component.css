@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.footer{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	background-color: #101823; 
+	height: 4em;
+	
+}
+
+.footer div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.footer div img{
+	height: 100%;
+}
+
+.footer div p {
+    	color: #f6f6f6;
+	font-size: 1.5em;
+}
